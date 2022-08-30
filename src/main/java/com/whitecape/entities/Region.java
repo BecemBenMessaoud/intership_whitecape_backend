@@ -1,4 +1,5 @@
 package com.whitecape.entities;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,16 +12,12 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name="admin")
-public class Admin {
-
-    @Id
-    @GeneratedValue
-    @Column(name="ID")
-    private Long id ;
-    private String name;
-    private String email;
-    private String password ;
-    private int is_SuperAdmin;
-
+@Table(name="region")
+public class Region {
+        @Id
+        @GeneratedValue
+        @Column(name="ID")
+        private Long id ;
+        private String type;
+        private int postal;
 }

@@ -7,5 +7,6 @@ import java.util.List;
 public interface AdminService {
     Admin addAdmin(Admin admin);
     List<Admin> listerAllAdmin();
-    void deleteAdmin(Admin admin);
+    void deleteAdmin(Long id);
+    Admin updateAdmin(Admin admin,long adminId);
 }

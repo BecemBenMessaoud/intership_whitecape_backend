@@ -4,21 +4,20 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
+import javax.persistence.*;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class User {
+@Table(name="category")
+public class Category {
     @Id
     @GeneratedValue
     @Column(name="ID")
     private Long id ;
-    private String email;
-    private String address;
-    private String password;
+    private String type;
+    private int level;
 }
